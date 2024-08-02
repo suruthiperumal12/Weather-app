@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #667eea, #764ba2); /* Gradient background */
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    /* Gradient background */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,13 +19,16 @@ body {
 }
 
 input {
-    padding: 10px 40px 10px 10px; /* Add padding-right to make space for the icon */
+    padding: 10px 40px 10px 10px;
+    /* Add padding-right to make space for the icon */
     margin: 10px;
     width: calc(90% - 22px);
     border: 1px solid #ccc;
     border-radius: 5px;
-    background: url('/images/search.png') no-repeat right 10px center, #fff; /* Add the icon as background */
-    background-size: 20px; /* Adjust the size of the icon */
+    background: url('/images/search.png') no-repeat right 10px center, #fff;
+    /* Add the icon as background */
+    background-size: 20px;
+    /* Adjust the size of the icon */
     color: #333;
 }
 
@@ -54,10 +58,12 @@ button:hover {
     border-radius: 5px;
     display: none;
 }
+
 .weather-icon {
     width: 100px;
     height: 100px;
 }
+
 /* Styles for tablets and small desktops */
 @media (max-width: 1024px) {
     .container {
@@ -65,7 +71,8 @@ button:hover {
         padding: 15px;
     }
 
-    input, button {
+    input,
+    button {
         width: calc(100% - 22px);
         margin: 5px 0;
     }
@@ -89,8 +96,9 @@ button:hover {
         padding: 10px;
     }
 
-    input, button {
-        width: calc(100% - 22px);
+    input,
+    button {
+        width: calc(100% - 52px);
         margin: 5px 0;
     }
 
