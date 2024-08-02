@@ -12,7 +12,6 @@ document.getElementById("getWeather").addEventListener("click", function () {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
         if (data.cod === 200) {
           const weatherDescription = data.weather[0].description.toLowerCase();
           const weatherImage = document.getElementById("weatherImage");
