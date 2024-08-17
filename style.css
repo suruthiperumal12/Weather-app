@@ -101,7 +101,7 @@ button:hover {
     }
 
     .container {
-        width: 100%;
+        width: 95%;
         padding: 10px;
     }
 
@@ -119,6 +119,7 @@ button:hover {
 @media (max-width: 480px) {
     .container {
         padding: 5px;
+        width: 97%;
     }
 
     input {
