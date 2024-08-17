@@ -102,6 +102,8 @@ button:hover {
     .container {
         width: 90%;
         margin: 15px;
+        top: 5px;
+        /* Reduced top margin for mobile devices */
     }
 
     input,
@@ -110,13 +112,13 @@ button:hover {
     }
 }
 
-/* Styles for very small mobile devices */
 @media (max-width: 480px) {
     .container {
         width: 100%;
         padding: 10px;
         margin: 10px;
-        /* Added margin for very small devices */
+        top: 0;
+        /* No top margin for very small devices */
     }
 
     .weather-icon {
