@@ -78,7 +78,7 @@ button:hover {
 /* Styles for tablets and small desktops */
 @media (max-width: 1024px) {
     .container {
-        width: 75%;
+        width: 80%;
         padding: 15px;
         margin: 15px auto;
         /* Center the container with margin */
@@ -105,10 +105,10 @@ button:hover {
     }
 
     .container {
-        width: 85%;
+        width: 90%;
         padding: 15px;
         /* Increased padding for better spacing */
-        margin: 15px;
+        margin: 15px auto;
         /* Center the container with margin */
     }
 
@@ -125,10 +125,17 @@ button:hover {
 
 /* Styles for very small mobile devices */
 @media (max-width: 480px) {
+    body {
+        padding: 10px;
+        /* Ensure body has padding for better visibility */
+    }
+
     .container {
         padding: 10px;
-        margin: 10px;
-        width: 90%;
+        margin: 10px auto;
+        /* Center the container with margin */
+        width: 100%;
+        /* Use full width with margin */
     }
 
     input {
