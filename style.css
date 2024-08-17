@@ -105,10 +105,10 @@ button:hover {
     }
 
     .container {
-        width: 90%;
+        width: 85%;
         padding: 15px;
         /* Increased padding for better spacing */
-        margin: 20px auto;
+        margin: 10px auto;
         /* Center the container with margin */
     }
 
@@ -127,11 +127,8 @@ button:hover {
 @media (max-width: 480px) {
     .container {
         padding: 10px;
-        /* Reduced padding for very small screens */
-        margin: 10px auto;
-        /* Center the container with margin */
-        width: 95%;
-        /* Full width with small margin */
+        margin: 5px auto;
+        width: 90%;
     }
 
     input {
