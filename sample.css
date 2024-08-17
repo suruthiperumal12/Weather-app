@@ -1,67 +1,48 @@
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    background: linear-gradient(135deg, #0074FF, #00c6FF, #1E3A8A);
-    height: 100vh;
-    color: white;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    /* Gradient background */
     display: flex;
-    align-items: center;
     justify-content: center;
-    font-family: "Poppins", system-ui;
-    font-weight: 400;
-    font-style: normal;
-
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: white;
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     background: rgba(0, 0, 0, 0.6);
     padding: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    width: 40%;
-    height: auto;
-}
-
-.weatherinputs {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    padding: 10px;
-}
-
-
-#weatherResult {
-    margin: 10px;
-    padding: 10px;
-    display: none;
+    width: 90%;
+    max-width: 500px;
+    /* Max width for larger screens */
 }
 
 input {
     padding: 10px 40px 10px 10px;
-    border: none;
-    margin: 10px;
-    width: 100%;
+    margin: 10px 0;
+    width: calc(100% - 22px);
+    /* Full width minus padding */
     border: 1px solid #ccc;
     border-radius: 5px;
-    background: url('/images/search.png') no-repeat right 10px center, rgba(255, 255, 255, 0.1);
+    background: url('/images/search.png') no-repeat right 10px center, #fff;
     background-size: 20px;
-    color: white;
+    /* Adjust the size of the icon */
+    color: #333;
     outline: none;
-
 }
 
 input::placeholder {
-    font-size: 1em;
-    font-family: "Poppins", system-ui;
+    color: #888;
 }
 
 button {
@@ -72,11 +53,21 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    font-family: "Poppins", system-ui;
+    width: calc(100% - 22px);
+    /* Full width minus padding */
 }
 
 button:hover {
     background-color: #218838;
+}
+
+#weatherResult {
+    margin-top: 20px;
+    font-size: 1.2em;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
 }
 
 .weather-icon {
@@ -88,48 +79,77 @@ button:hover {
 @media (max-width: 1024px) {
     .container {
         width: 80%;
-        /* Adjust container width */
+        padding: 15px;
+        margin: 15px auto;
+        /* Center the container with margin */
     }
 
-    .weather-icon {
-        width: 80px;
-        height: 80px;
+    input,
+    button {
+        width: calc(100% - 22px);
+        /* Full width minus padding */
+    }
+
+    #weatherResult {
+        font-size: 1em;
     }
 }
 
 /* Styles for mobile devices */
 @media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 20px;
+        height: auto;
+    }
+
     .container {
         width: 90%;
-        /* Adjust container width */
+        padding: 15px;
+        /* Increased padding for better spacing */
+        margin: 15px auto;
+        /* Center the container with margin */
     }
 
     input,
     button {
-        width: calc(100% - 20px);
+        width: calc(100% - 22px);
+        /* Full width minus padding */
+    }
+
+    #weatherResult {
+        font-size: 1em;
     }
 }
 
 /* Styles for very small mobile devices */
 @media (max-width: 480px) {
-    .container {
-        width: 100%;
-        /* Full width on very small screens */
+    body {
         padding: 10px;
+        /* Ensure body has padding for better visibility */
     }
 
-    .weather-icon {
-        width: 60px;
-        height: 60px;
+    .container {
+        padding: 10px;
+        margin: 10px auto;
+        /* Center the container with margin */
+        width: 100%;
+        /* Use full width with margin */
     }
 
     input {
-        padding: 8px 35px 8px 8px;
-        font-size: 0.9em;
+        padding: 10px;
+        background-size: 15px;
+        /* Adjust icon size */
     }
 
     button {
         padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    #weatherResult {
         font-size: 0.9em;
     }
 }
