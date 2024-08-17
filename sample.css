@@ -83,12 +83,11 @@ button:hover {
     height: 100px;
 }
 
-/* Styles for tablets and small desktops */
 @media (max-width: 1024px) {
     .container {
+        top: 10px;
         width: 80%;
         margin: 20px;
-        /* Added margin for tablets and small desktops */
     }
 
     .weather-icon {
@@ -97,12 +96,11 @@ button:hover {
     }
 }
 
-/* Styles for mobile devices */
 @media (max-width: 768px) {
     .container {
         width: 90%;
         margin: 15px;
-        /* Added margin for mobile devices */
+        top: 10px;
     }
 
     input,
@@ -111,13 +109,12 @@ button:hover {
     }
 }
 
-/* Styles for very small mobile devices */
 @media (max-width: 480px) {
     .container {
+        top: 10px;
         width: 100%;
         padding: 10px;
         margin: 10px;
-        /* Added margin for very small devices */
     }
 
     .weather-icon {
