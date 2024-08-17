@@ -77,8 +77,9 @@ button:hover {
 /* Styles for tablets and small desktops */
 @media (max-width: 1024px) {
     .container {
-        width: 80%;
+        width: 75%;
         padding: 15px;
+        margin: 10px
     }
 
     input,
@@ -101,8 +102,9 @@ button:hover {
     }
 
     .container {
-        width: 95%;
+        width: 90%;
         padding: 10px;
+        margin: 10px;
     }
 
     input,
@@ -119,7 +121,8 @@ button:hover {
 @media (max-width: 480px) {
     .container {
         padding: 5px;
-        width: 97%;
+        margin: 5px;
+        width: 95%;
     }
 
     input {
