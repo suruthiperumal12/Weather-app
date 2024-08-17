@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #667eea, #764ba2);
@@ -16,20 +22,22 @@ body {
     padding: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    /* Max width for larger screens */
 }
 
 input {
     padding: 10px 40px 10px 10px;
-    /* Add padding-right to make space for the icon */
-    margin: 10px;
-    width: calc(90% - 22px);
+    margin: 10px 0;
+    width: calc(100% - 22px);
+    /* Full width minus padding */
     border: 1px solid #ccc;
     border-radius: 5px;
     background: url('/images/search.png') no-repeat right 10px center, #fff;
-    /* Add the icon as background */
     background-size: 20px;
-    /* Adjust the size of the icon */
     color: #333;
+    outline: none;
 }
 
 input::placeholder {
@@ -44,6 +52,8 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    width: calc(100% - 22px);
+    /* Full width minus padding */
 }
 
 button:hover {
@@ -74,7 +84,6 @@ button:hover {
     input,
     button {
         width: calc(100% - 22px);
-        margin: 5px 0;
     }
 
     #weatherResult {
@@ -98,8 +107,7 @@ button:hover {
 
     input,
     button {
-        width: calc(100% - 52px);
-        margin: 5px 0;
+        width: calc(100% - 22px);
     }
 
     #weatherResult {
@@ -110,16 +118,11 @@ button:hover {
 /* Styles for very small mobile devices */
 @media (max-width: 480px) {
     .container {
-        width: 100%;
         padding: 5px;
     }
 
-    h1 {
-        font-size: 1.5em;
-    }
-
     input {
-        padding: 10px 10px;
+        padding: 10px;
         background-size: 15px;
     }
 
