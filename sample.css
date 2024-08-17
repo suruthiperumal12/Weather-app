@@ -13,6 +13,8 @@ body {
     font-family: "Poppins", system-ui;
     font-weight: 400;
     font-style: normal;
+    overflow: hidden;
+    /* Prevent scrollbars */
 }
 
 .container {
@@ -27,7 +29,9 @@ body {
     width: 40%;
     height: auto;
     margin: 20px;
-    /* Added margin for larger screens */
+    position: relative;
+    top: 10px;
+    /* Adjust top position */
 }
 
 .weatherinputs {
@@ -83,11 +87,13 @@ button:hover {
     height: 100px;
 }
 
+/* Styles for tablets and small desktops */
 @media (max-width: 1024px) {
     .container {
-        top: 10px;
         width: 80%;
         margin: 20px;
+        top: 10px;
+        /* Maintain top position for tablets */
     }
 
     .weather-icon {
@@ -96,11 +102,13 @@ button:hover {
     }
 }
 
+/* Styles for mobile devices */
 @media (max-width: 768px) {
     .container {
         width: 90%;
         margin: 15px;
         top: 10px;
+        /* Maintain top position for mobile devices */
     }
 
     input,
@@ -109,12 +117,14 @@ button:hover {
     }
 }
 
+/* Styles for very small mobile devices */
 @media (max-width: 480px) {
     .container {
-        top: 10px;
         width: 100%;
         padding: 10px;
         margin: 10px;
+        top: 10px;
+        /* Maintain top position for very small devices */
     }
 
     .weather-icon {
